@@ -1,4 +1,5 @@
 import 'package:ecommerce/images_const/image_const.dart';
+import 'package:ecommerce/main_page/main_page.dart';
 import 'package:ecommerce/signup/sign_up.dart';
 import 'package:flutter/material.dart';
 
@@ -61,20 +62,28 @@ class HomePage extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Center(
-              child: Container(
-                height: 50,
-                width: 200,
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Center(
-                  child: Text(
-                    'Login',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MainPage()),
+                  );
+                },
+                child: Container(
+                  height: 50,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Login',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
