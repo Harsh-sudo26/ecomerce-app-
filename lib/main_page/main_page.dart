@@ -1,74 +1,314 @@
-import 'package:ecommerce/images_const/image_const.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
   MainPage({super.key});
+
   final List products = [
     {
       "id": 1,
-      "name": "Wireless Headphones",
+      "name": " Mac Book",
       "price": 59.99,
       "image":
-          "https://imgs.search.brave.com/gVrEo_m2SkNb45VkuRPdQnzVh8-E0t6uj1OoqE_hTPk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9ibGFjay13aXJl/bGVzcy1oZWFkcGhv/bmVzLWJsdWUtYmFj/a2dyb3VuZF8xNzY0/MDItNjE2Ni5qcGc_/c2VtdD1haXNfaHli/cmlkJnc9NzQw",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXp09evdVOBRBmG03ax9d8fjr-sjKcRM-2Xw&s",
     },
     {
       "id": 2,
       "name": "Smart Watch",
-      "price": 120.00,
+      "price": 129.49,
       "image":
-          "https://imgs.search.brave.com/6_LyGKozbu2SvyceS8_CF43HrGVVoFYXaYzM6KOyNx8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL1Mv/YXBsdXMtbWVkaWEt/bGlicmFyeS1zZXJ2/aWNlLW1lZGlhL2I2/ODhlY2U3LWI4Mjkt/NGE3Ni04ZWQyLWIy/MTUyZjEzZjhmMy5f/X0NSMCwwLDMwMCwz/MDBfUFQwX1NYMzAw/X1YxX19fLnBuZw",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTNFiOBAf4U50WlqDdPNu6RL1aMyxfP2smNA&s",
     },
     {
       "id": 3,
-      "name": "Gaming Mouse",
-      "price": 35.49,
+      "name": "DSLR Camera",
+      "price": 749.00,
       "image":
-          "https://imgs.search.brave.com/CPgewQqfHmp-tF1d6uG0859pZunQ4jXIQ_WB_chtE0g/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNTgv/MTgyLzU4NS9zbWFs/bC9zbGVlay1nYW1p/bmctbW91c2UtcG9z/aXRpb25lZC1vbi1h/LXNtb290aC1zdXJm/YWNlLWlsbHVtaW5h/dGVkLWJ5LXNvZnQt/YmFja2dyb3VuZC1s/aWdodC1waG90by5q/cGc",
-    },
-    {
-      "id": 4,
-      "name": "Mechanical Keyboard",
-      "price": 89.99,
-      "image":
-          "https://imgs.search.brave.com/UF1nevQt63fCEI8K6HFGghKDsQi9BYXKrtRaSN_2Tlk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/dGhld2lyZWN1dHRl/ci5jb20vd3AtY29u/dGVudC9tZWRpYS8y/MDI0LzA0L21lY2hh/bmljYWxrZXlib2Fy/ZHMtMjA0OHB4LTEz/ODUuanBnP2F1dG89/d2VicCZxdWFsaXR5/PTYwJndpZHRoPTU3/MA",
-    },
-    {
-      "id": 5,
-      "name": "4K Monitor",
-      "price": 279.99,
-      "image":
-          "https://imgs.search.brave.com/cnmgGbzmu3-xu2g5vWcN28WalffB9l9jQ1GUVACAoDY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L1o2/N2VvRENRV0pqYUJY/clR4cnB3RUYuanBn",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLzl2Jz2O3NSb_OvC_E51usZNgRFHCRq5KFA&s",
     },
   ];
+  final List Weeklytop = [
+    {
+      "id": 1,
+      "name": " T-Shirt",
+      "price": 59.99,
+      "image":
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS87DhtSTUAFmRwAibw8TYSAwiocJ3VmTmhzA&s",
+    },
+    {
+      "id": 2,
+      "name": "I phone",
+      "price": 129.49,
+      "image":
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGxWIiPJDVdrz4QX3a-5R7ZqGx23i2gIVdUg&s",
+    },
+    {
+      "id": 3,
+      "name": "Air pods",
+      "price": 749.00,
+      "image":
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmYjGpLiHD_V0CIZyoMSje9S_YTv9zQTlP1Q&s",
+    },
+  ];
+  final List Trendy = [
+    {
+      "id": 1,
+      "name": " Shoes",
+      "price": 59.99,
+      "image":
+          "https://imgs.search.brave.com/pgRnWAJmBA21XAumsq2OH8A0fLy5hZDhGY0xowX541A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzA5LzgyLzI2/LzM2MF9GXzIwOTgy/MjY1M19Gem9mZjA0/Ylo4UUhuc2VGQ0h5/N3ZrTG1XbDFtSURI/Ty5qcGc",
+    },
+    {
+      "id": 2,
+      "name": "Bottle",
+      "price": 129.49,
+      "image":
+          "https://imgs.search.brave.com/DqkqzL8szRfEkZ1IeQ2W_17hBSDpJofivIwhRQnjpCg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi93aGl0/ZS1yZXVzYWJsZS13/YXRlci1ib3R0bGUt/bW9ja3VwLTMyNjI2/MDc3Ni5qcGc",
+    },
+    {
+      "id": 3,
+      "name": "Gaming mouse",
+      "price": 749.00,
+      "image":
+          "https://imgs.search.brave.com/PYlLbGxFmwUjjxiZiNJQ_Gg3fOA0FSI8K1lxQ3dR5ZU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNTgv/Mjk4LzMzMC9zbWFs/bC9tb2Rlcm4td2hp/dGUtZ2FtaW5nLW1v/dXNlLXdpdGgtcmdi/LWxpZ2h0aW5nLXNp/dHRpbmctb24td29v/ZGVuLWRlc2stcGhv/dG8uanBn",
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            TextField(
-              decoration: InputDecoration(
-                labelText: "Search",
-                suffixIcon: Icon(Icons.search),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
-                ),
-              ),
-            ),
-            Row(
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20),
+          child: SingleChildScrollView(
+            child: Column(
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 20, left: 20),
-                  child: Text(
-                    'Hot Deals',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                SizedBox(height: 20),
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Search',
+                          suffixIcon: Icon(Icons.search),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    CircleAvatar(
+                      radius: 20,
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.shopping_cart),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 15),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Hot Deals',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'View All',
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
+                SizedBox(height: 10),
+
+                // GridView of Products
+                GridView.builder(
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: products.length,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    childAspectRatio: 0.7,
                   ),
+                  itemBuilder: (context, index) {
+                    final item = products[index];
+                    return Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: Image.network(
+                              item['image'],
+                              fit: BoxFit.cover,
+                              width: double.infinity,
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            item['name'],
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            "\$${item['price']}",
+                            style: TextStyle(color: Colors.red),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+
+                SizedBox(height: 15),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Weekly Top',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'View All',
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                GridView.builder(
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: products.length,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    childAspectRatio: 0.7,
+                  ),
+                  itemBuilder: (context, index) {
+                    final items = Weeklytop[index];
+                    return Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: Image.network(
+                              items['image'],
+                              fit: BoxFit.cover,
+                              width: double.infinity,
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            items['name'],
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            "\$${items['price']}",
+                            style: TextStyle(color: Colors.red),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+                SizedBox(height: 15),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Trendy ',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'View All',
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                GridView.builder(
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: products.length,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    childAspectRatio: 0.7,
+                  ),
+                  itemBuilder: (context, index) {
+                    final items = Trendy[index];
+                    return Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: Image.network(
+                              items['image'],
+                              fit: BoxFit.fitHeight,
+                              width: double.infinity,
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            items['name'],
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            "\$${items['price']}",
+                            style: TextStyle(color: Colors.red),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
                 ),
               ],
             ),
-          ],
+          ),
         ),
       ),
     );
