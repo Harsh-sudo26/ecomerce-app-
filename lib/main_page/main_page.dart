@@ -1,3 +1,5 @@
+import 'package:ecommerce/productdetail/produuctdetails.dart';
+import 'package:ecommerce/widget/_textbutton.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
@@ -8,45 +10,29 @@ class MainPage extends StatelessWidget {
       "id": 1,
       "name": " Mac Book",
       "price": 59.99,
-      "image":
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXp09evdVOBRBmG03ax9d8fjr-sjKcRM-2Xw&s",
+      "image": "assets/macbook.png",
     },
     {
       "id": 2,
       "name": "Smart Watch",
       "price": 129.49,
-      "image":
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTNFiOBAf4U50WlqDdPNu6RL1aMyxfP2smNA&s",
+      "image": "assets/smart watch.png",
     },
     {
       "id": 3,
       "name": "DSLR Camera",
       "price": 749.00,
-      "image":
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLzl2Jz2O3NSb_OvC_E51usZNgRFHCRq5KFA&s",
+      "image": "assets/dslr.png",
     },
   ];
   final List Weeklytop = [
-    {
-      "id": 1,
-      "name": " T-Shirt",
-      "price": 59.99,
-      "image":
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS87DhtSTUAFmRwAibw8TYSAwiocJ3VmTmhzA&s",
-    },
-    {
-      "id": 2,
-      "name": "I phone",
-      "price": 129.49,
-      "image":
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGxWIiPJDVdrz4QX3a-5R7ZqGx23i2gIVdUg&s",
-    },
+    {"id": 1, "name": " T-Shirt", "price": 59.99, "image": "assets/tshirt.png"},
+    {"id": 2, "name": "I phone", "price": 129.49, "image": "assets/iphone.png"},
     {
       "id": 3,
       "name": "Air pods",
       "price": 749.00,
-      "image":
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmYjGpLiHD_V0CIZyoMSje9S_YTv9zQTlP1Q&s",
+      "image": "assets/airpod.png",
     },
   ];
   final List Trendy = [
@@ -54,22 +40,14 @@ class MainPage extends StatelessWidget {
       "id": 1,
       "name": " Shoes",
       "price": 59.99,
-      "image":
-          "https://imgs.search.brave.com/pgRnWAJmBA21XAumsq2OH8A0fLy5hZDhGY0xowX541A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzA5LzgyLzI2/LzM2MF9GXzIwOTgy/MjY1M19Gem9mZjA0/Ylo4UUhuc2VGQ0h5/N3ZrTG1XbDFtSURI/Ty5qcGc",
+      "image": "assets/men shoes.png",
     },
-    {
-      "id": 2,
-      "name": "Bottle",
-      "price": 129.49,
-      "image":
-          "https://imgs.search.brave.com/DqkqzL8szRfEkZ1IeQ2W_17hBSDpJofivIwhRQnjpCg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi93aGl0/ZS1yZXVzYWJsZS13/YXRlci1ib3R0bGUt/bW9ja3VwLTMyNjI2/MDc3Ni5qcGc",
-    },
+    {"id": 2, "name": "Bottle", "price": 129.49, "image": "assets/bottle.png"},
     {
       "id": 3,
       "name": "Gaming mouse",
       "price": 749.00,
-      "image":
-          "https://imgs.search.brave.com/PYlLbGxFmwUjjxiZiNJQ_Gg3fOA0FSI8K1lxQ3dR5ZU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNTgv/Mjk4LzMzMC9zbWFs/bC9tb2Rlcm4td2hp/dGUtZ2FtaW5nLW1v/dXNlLXdpdGgtcmdi/LWxpZ2h0aW5nLXNp/dHRpbmctb24td29v/ZGVuLWRlc2stcGhv/dG8uanBn",
+      "image": "assets/mouse.png",
     },
   ];
 
@@ -118,16 +96,7 @@ class MainPage extends StatelessWidget {
                         fontSize: 20,
                       ),
                     ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'View All',
-                        style: TextStyle(
-                          color: Colors.red,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
+                    Txtbtn(), //custom widget here of text
                   ],
                 ),
 
@@ -146,31 +115,42 @@ class MainPage extends StatelessWidget {
                   ),
                   itemBuilder: (context, index) {
                     final item = products[index];
-                    return Container(
-                      decoration: BoxDecoration(
-                        color: Colors.grey[200],
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Column(
-                        children: [
-                          Expanded(
-                            child: Image.network(
-                              item['image'],
-                              fit: BoxFit.cover,
-                              width: double.infinity,
+                    return InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                Produuctdetails(product: item),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.grey[200],
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Column(
+                          children: [
+                            Expanded(
+                              child: Image.asset(
+                                item['image'],
+                                fit: BoxFit.cover,
+                                width: double.infinity,
+                              ),
                             ),
-                          ),
-                          SizedBox(height: 10),
-                          Text(
-                            item['name'],
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(height: 10),
-                          Text(
-                            "\$${item['price']}",
-                            style: TextStyle(color: Colors.red),
-                          ),
-                        ],
+                            SizedBox(height: 10),
+                            Text(
+                              item['name'],
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "\$${item['price']}",
+                              style: TextStyle(color: Colors.red),
+                            ),
+                          ],
+                        ),
                       ),
                     );
                   },
@@ -188,16 +168,7 @@ class MainPage extends StatelessWidget {
                         fontSize: 20,
                       ),
                     ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'View All',
-                        style: TextStyle(
-                          color: Colors.red,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
+                    Txtbtn(), //custom widget here of text
                   ],
                 ),
                 GridView.builder(
@@ -212,31 +183,42 @@ class MainPage extends StatelessWidget {
                   ),
                   itemBuilder: (context, index) {
                     final items = Weeklytop[index];
-                    return Container(
-                      decoration: BoxDecoration(
-                        color: Colors.grey[200],
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Column(
-                        children: [
-                          Expanded(
-                            child: Image.network(
-                              items['image'],
-                              fit: BoxFit.cover,
-                              width: double.infinity,
+                    return InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                Produuctdetails(product: items),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.grey[200],
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Column(
+                          children: [
+                            Expanded(
+                              child: Image.asset(
+                                items['image'],
+                                fit: BoxFit.cover,
+                                width: double.infinity,
+                              ),
                             ),
-                          ),
-                          SizedBox(height: 10),
-                          Text(
-                            items['name'],
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(height: 10),
-                          Text(
-                            "\$${items['price']}",
-                            style: TextStyle(color: Colors.red),
-                          ),
-                        ],
+                            SizedBox(height: 10),
+                            Text(
+                              items['name'],
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "\$${items['price']}",
+                              style: TextStyle(color: Colors.red),
+                            ),
+                          ],
+                        ),
                       ),
                     );
                   },
@@ -253,16 +235,7 @@ class MainPage extends StatelessWidget {
                         fontSize: 20,
                       ),
                     ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'View All',
-                        style: TextStyle(
-                          color: Colors.red,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
+                    Txtbtn(), //custom widget here of text
                   ],
                 ),
                 GridView.builder(
@@ -276,32 +249,43 @@ class MainPage extends StatelessWidget {
                     childAspectRatio: 0.7,
                   ),
                   itemBuilder: (context, index) {
-                    final items = Trendy[index];
-                    return Container(
-                      decoration: BoxDecoration(
-                        color: Colors.grey[200],
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Column(
-                        children: [
-                          Expanded(
-                            child: Image.network(
-                              items['image'],
-                              fit: BoxFit.fitHeight,
-                              width: double.infinity,
+                    final item2 = Trendy[index];
+                    return InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                Produuctdetails(product: item2),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.grey[200],
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Column(
+                          children: [
+                            Expanded(
+                              child: Image.asset(
+                                item2['image'],
+                                fit: BoxFit.fitHeight,
+                                width: double.infinity,
+                              ),
                             ),
-                          ),
-                          SizedBox(height: 10),
-                          Text(
-                            items['name'],
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(height: 10),
-                          Text(
-                            "\$${items['price']}",
-                            style: TextStyle(color: Colors.red),
-                          ),
-                        ],
+                            SizedBox(height: 10),
+                            Text(
+                              item2['name'],
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "\$${item2['price']}",
+                              style: TextStyle(color: Colors.red),
+                            ),
+                          ],
+                        ),
                       ),
                     );
                   },
