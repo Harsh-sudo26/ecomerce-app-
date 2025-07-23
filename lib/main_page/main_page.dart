@@ -1,5 +1,5 @@
 import 'package:ecommerce/productdetail/produuctdetails.dart';
-import 'package:ecommerce/widget/_textbutton.dart';
+
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
@@ -26,8 +26,18 @@ class MainPage extends StatelessWidget {
     },
   ];
   final List weeklytop = [
-    {"id": 1, "name": " T-Shirt", "price": 59.99, "image": "assets/image/tshirt.png"},
-    {"id": 2, "name": "I phone", "price": 129.49, "image": "assets/image/iphone.png"},
+    {
+      "id": 1,
+      "name": " T-Shirt",
+      "price": 59.99,
+      "image": "assets/image/tshirt.png",
+    },
+    {
+      "id": 2,
+      "name": "I phone",
+      "price": 129.49,
+      "image": "assets/image/iphone.png",
+    },
     {
       "id": 3,
       "name": "Air pods",
@@ -42,7 +52,12 @@ class MainPage extends StatelessWidget {
       "price": 59.99,
       "image": "assets/image/men shoes.png",
     },
-    {"id": 2, "name": "Bottle", "price": 129.49, "image": "assets/image/bottle.png"},
+    {
+      "id": 2,
+      "name": "Bottle",
+      "price": 129.49,
+      "image": "assets/image/bottle.png",
+    },
     {
       "id": 3,
       "name": "Gaming mouse",
@@ -85,7 +100,6 @@ class MainPage extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 15),
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -96,13 +110,22 @@ class MainPage extends StatelessWidget {
                         fontSize: 20,
                       ),
                     ),
-                    Txtbtn(), //custom widget here of text
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'View All',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.red,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
 
                 SizedBox(height: 10),
 
-                // GridView of Products
                 GridView.builder(
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
@@ -168,7 +191,17 @@ class MainPage extends StatelessWidget {
                         fontSize: 20,
                       ),
                     ),
-                    Txtbtn(), //custom widget here of text
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'View All',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.red,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
                 GridView.builder(
@@ -235,7 +268,17 @@ class MainPage extends StatelessWidget {
                         fontSize: 20,
                       ),
                     ),
-                    Txtbtn(), //custom widget here of text
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'View All',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.red,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
                 GridView.builder(
