@@ -10,44 +10,44 @@ class MainPage extends StatelessWidget {
       "id": 1,
       "name": " Mac Book",
       "price": 59.99,
-      "image": "assets/macbook.png",
+      "image": "assets/image/macbook.png",
     },
     {
       "id": 2,
       "name": "Smart Watch",
       "price": 129.49,
-      "image": "assets/smart watch.png",
+      "image": "assets/image/smart watch.png",
     },
     {
       "id": 3,
       "name": "DSLR Camera",
       "price": 749.00,
-      "image": "assets/dslr.png",
+      "image": "assets/image/dslr.png",
     },
   ];
-  final List Weeklytop = [
-    {"id": 1, "name": " T-Shirt", "price": 59.99, "image": "assets/tshirt.png"},
-    {"id": 2, "name": "I phone", "price": 129.49, "image": "assets/iphone.png"},
+  final List weeklytop = [
+    {"id": 1, "name": " T-Shirt", "price": 59.99, "image": "assets/image/tshirt.png"},
+    {"id": 2, "name": "I phone", "price": 129.49, "image": "assets/image/iphone.png"},
     {
       "id": 3,
       "name": "Air pods",
       "price": 749.00,
-      "image": "assets/airpod.png",
+      "image": "assets/image/airpod.png",
     },
   ];
-  final List Trendy = [
+  final List trendy = [
     {
       "id": 1,
       "name": " Shoes",
       "price": 59.99,
-      "image": "assets/men shoes.png",
+      "image": "assets/image/men shoes.png",
     },
-    {"id": 2, "name": "Bottle", "price": 129.49, "image": "assets/bottle.png"},
+    {"id": 2, "name": "Bottle", "price": 129.49, "image": "assets/image/bottle.png"},
     {
       "id": 3,
       "name": "Gaming mouse",
       "price": 749.00,
-      "image": "assets/mouse.png",
+      "image": "assets/image/mouse.png",
     },
   ];
 
@@ -182,7 +182,7 @@ class MainPage extends StatelessWidget {
                     childAspectRatio: 0.7,
                   ),
                   itemBuilder: (context, index) {
-                    final items = Weeklytop[index];
+                    final items = weeklytop[index];
                     return InkWell(
                       onTap: () {
                         Navigator.push(
@@ -249,7 +249,7 @@ class MainPage extends StatelessWidget {
                     childAspectRatio: 0.7,
                   ),
                   itemBuilder: (context, index) {
-                    final item2 = Trendy[index];
+                    final item2 = trendy[index];
                     return InkWell(
                       onTap: () {
                         Navigator.push(

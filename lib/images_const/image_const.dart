@@ -1,1 +1,1 @@
-final String loginimg = "assets/loginui.png";
+const String loginimg = "assets/image/loginui.png";
