@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        'Create Account',
+                        'Log In',
                         style: TextStyle(
                           fontSize: 28,
                           fontWeight: FontWeight.bold,
