@@ -143,8 +143,9 @@ class MainPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                Produuctdetails(product: item),
+                            builder: (context) => Produuctdetails(
+                              product: item,
+                            ), //product parameter passed the value of items
                           ),
                         );
                       },
@@ -241,10 +242,7 @@ class MainPage extends StatelessWidget {
                               ),
                             ),
                             SizedBox(height: 10),
-                            Text(
-                              items['name'],
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
+
                             SizedBox(height: 10),
                             Text(
                               "\$${items['price']}",
