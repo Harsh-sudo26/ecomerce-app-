@@ -8,21 +8,30 @@ class MainPage extends StatelessWidget {
   final List products = [
     {
       "id": 1,
-      "name": " Mac Book",
+      "name": " Mac Book M1 pro",
       "price": 59.99,
       "image": "assets/image/macbook.png",
+      "Author": "Apple",
+      "description":
+          "A hobbit named Bilbo Baggins goes on an unexpected adventure with a group of dwarves to reclaim their homeland.",
     },
     {
       "id": 2,
       "name": "Smart Watch",
       "price": 129.49,
       "image": "assets/image/smart watch.png",
+      "Author": "Realme",
+      "description":
+          "A hobbit named Bilbo Baggins goes on an unexpected adventure with a group of dwarves to reclaim their homeland.",
     },
     {
       "id": 3,
       "name": "DSLR Camera",
       "price": 749.00,
       "image": "assets/image/dslr.png",
+      "Author": "Nikkon",
+      "description":
+          "A hobbit named Bilbo Baggins goes on an unexpected adventure with a group of dwarves to reclaim their homeland.",
     },
   ];
   final List weeklytop = [
@@ -31,18 +40,27 @@ class MainPage extends StatelessWidget {
       "name": " T-Shirt",
       "price": 59.99,
       "image": "assets/image/tshirt.png",
+      "Author": "Puma",
+      "description":
+          "A hobbit named Bilbo Baggins goes on an unexpected adventure with a group of dwarves to reclaim their homeland.",
     },
     {
       "id": 2,
       "name": "I phone",
       "price": 129.49,
       "image": "assets/image/iphone.png",
+      "Author": "Apple",
+      "description":
+          "A hobbit named Bilbo Baggins goes on an unexpected adventure with a group of dwarves to reclaim their homeland.",
     },
     {
       "id": 3,
       "name": "Air pods",
       "price": 749.00,
       "image": "assets/image/airpod.png",
+      "Author": "Apple",
+      "description":
+          "A hobbit named Bilbo Baggins goes on an unexpected adventure with a group of dwarves to reclaim their homeland.",
     },
   ];
   final List trendy = [
@@ -51,18 +69,27 @@ class MainPage extends StatelessWidget {
       "name": " Shoes",
       "price": 59.99,
       "image": "assets/image/men shoes.png",
+      "Author": "Addidas",
+      "description":
+          "A hobbit named Bilbo Baggins goes on an unexpected adventure with a group of dwarves to reclaim their homeland.",
     },
     {
       "id": 2,
       "name": "Bottle",
       "price": 129.49,
       "image": "assets/image/bottle.png",
+      "Author": "Cello",
+      "description":
+          "A hobbit named Bilbo Baggins goes on an unexpected adventure with a group of dwarves to reclaim their homeland.",
     },
     {
       "id": 3,
       "name": "Gaming mouse",
       "price": 749.00,
       "image": "assets/image/mouse.png",
+      "Author": "RedGear",
+      "description":
+          "A hobbit named Bilbo Baggins goes on an unexpected adventure with a group of dwarves to reclaim their homeland.",
     },
   ];
 
@@ -241,7 +268,10 @@ class MainPage extends StatelessWidget {
                                 width: double.infinity,
                               ),
                             ),
-                            SizedBox(height: 10),
+                            Text(
+                              items['name'],
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
 
                             SizedBox(height: 10),
                             Text(
