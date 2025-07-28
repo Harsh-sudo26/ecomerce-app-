@@ -56,7 +56,37 @@ class _CheckoutState extends State<Checkout> {
             ),
           ),
           Row(children: [Text('')]),
-          Container(height: 100, color: Colors.redAccent),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 100,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.redAccent,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Proceed',
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: CircleAvatar(
+                      radius: 20,
+                      backgroundColor: Colors.blue,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
