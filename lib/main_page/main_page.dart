@@ -9,7 +9,7 @@ class MainPage extends StatelessWidget {
     {
       "id": 1,
       "name": " Mac Book M1 pro",
-      "price": 59.99,
+      "price": 2000.99,
       "image": "assets/image/macbook.png",
       "Author": "Apple",
       "description":
@@ -38,7 +38,7 @@ class MainPage extends StatelessWidget {
     {
       "id": 1,
       "name": " T-Shirt",
-      "price": 59.99,
+      "price": 100.99,
       "image": "assets/image/tshirt.png",
       "Author": "Puma",
       "description":
@@ -47,7 +47,7 @@ class MainPage extends StatelessWidget {
     {
       "id": 2,
       "name": "I phone",
-      "price": 129.49,
+      "price": 3000.49,
       "image": "assets/image/iphone.png",
       "Author": "Apple",
       "description":
@@ -67,7 +67,7 @@ class MainPage extends StatelessWidget {
     {
       "id": 1,
       "name": " Shoes",
-      "price": 59.99,
+      "price": 200.99,
       "image": "assets/image/men shoes.png",
       "Author": "Addidas",
       "description":
@@ -85,7 +85,7 @@ class MainPage extends StatelessWidget {
     {
       "id": 3,
       "name": "Gaming mouse",
-      "price": 749.00,
+      "price": 300.00,
       "image": "assets/image/mouse.png",
       "Author": "RedGear",
       "description":
@@ -198,7 +198,9 @@ class MainPage extends StatelessWidget {
                             SizedBox(height: 10),
                             Text(
                               "\$${item['price']}",
-                              style: TextStyle(color: Colors.red),
+                              style: TextStyle(
+                                color: const Color.fromARGB(255, 10, 9, 9),
+                              ),
                             ),
                           ],
                         ),
@@ -276,7 +278,9 @@ class MainPage extends StatelessWidget {
                             SizedBox(height: 10),
                             Text(
                               "\$${items['price']}",
-                              style: TextStyle(color: Colors.red),
+                              style: TextStyle(
+                                color: const Color.fromARGB(255, 25, 21, 21),
+                              ),
                             ),
                           ],
                         ),
@@ -353,7 +357,9 @@ class MainPage extends StatelessWidget {
                             SizedBox(height: 10),
                             Text(
                               "\$${item2['price']}",
-                              style: TextStyle(color: Colors.red),
+                              style: TextStyle(
+                                color: const Color.fromARGB(255, 26, 21, 21),
+                              ),
                             ),
                           ],
                         ),
