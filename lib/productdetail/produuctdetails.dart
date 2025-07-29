@@ -1,4 +1,5 @@
 import 'package:ecommerce/checkout.dart/checkout.dart';
+import 'package:ecommerce/colors.dart';
 import 'package:flutter/material.dart';
 
 class Produuctdetails extends StatefulWidget {
@@ -10,6 +11,7 @@ class Produuctdetails extends StatefulWidget {
 }
 
 class _ProduuctdetailsState extends State<Produuctdetails> {
+  Color _color = Colors.grey;
   var _itemcount = 0;
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class _ProduuctdetailsState extends State<Produuctdetails> {
               Container(
                 height: 350,
                 width: double.infinity,
-                color: const Color.fromARGB(255, 255, 255, 255),
+                color: whitecolor,
                 child: Column(
                   children: [
                     Align(
@@ -51,13 +53,30 @@ class _ProduuctdetailsState extends State<Produuctdetails> {
                       padding: const EdgeInsets.all(2.0),
                       child: Align(
                         alignment: Alignment.centerLeft,
-                        child: Text(
-                          '\$${widget.product['price']}',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(255, 26, 25, 25),
-                          ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              '\$${widget.product['price']}',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: blackcolor,
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  if (_color == Colors.grey) {
+                                    _color = Colors.red;
+                                  } else {
+                                    _color = Colors.grey;
+                                  }
+                                });
+                              },
+                              icon: Icon(Icons.favorite, color: _color),
+                            ),
+                          ],
                         ),
                       ),
                     ),
@@ -117,7 +136,7 @@ class _ProduuctdetailsState extends State<Produuctdetails> {
                     topLeft: Radius.circular(20),
                     topRight: Radius.circular(20),
                   ),
-                  color: const Color.fromARGB(255, 36, 35, 31),
+                  color: blackcolor,
                 ),
 
                 child: Column(
@@ -133,7 +152,7 @@ class _ProduuctdetailsState extends State<Produuctdetails> {
                             children: [
                               Text(
                                 'Quantity',
-                                style: TextStyle(color: Colors.white),
+                                style: TextStyle(color: whitecolor),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -160,14 +179,14 @@ class _ProduuctdetailsState extends State<Produuctdetails> {
                                         },
                                         icon: Icon(
                                           Icons.add,
-                                          color: Colors.white,
+                                          color: whitecolor,
                                         ),
                                       ),
                                       Text(
                                         '$_itemcount',
                                         style: TextStyle(
                                           fontSize: 15,
-                                          color: Colors.white,
+                                          color: whitecolor,
                                         ),
                                       ),
                                       IconButton(
@@ -180,7 +199,7 @@ class _ProduuctdetailsState extends State<Produuctdetails> {
                                         },
                                         icon: Icon(
                                           Icons.remove,
-                                          color: Colors.white,
+                                          color: whitecolor,
                                         ),
                                       ),
                                     ],
@@ -193,7 +212,7 @@ class _ProduuctdetailsState extends State<Produuctdetails> {
                             children: [
                               Text(
                                 'Colors',
-                                style: TextStyle(color: Colors.white),
+                                style: TextStyle(color: whitecolor),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -243,7 +262,7 @@ class _ProduuctdetailsState extends State<Produuctdetails> {
                                   padding: const EdgeInsets.only(right: 5),
                                   child: Icon(
                                     Icons.shopping_cart_checkout,
-                                    color: Colors.white,
+                                    color: white,
                                   ),
                                 ),
                                 Text(
@@ -251,7 +270,7 @@ class _ProduuctdetailsState extends State<Produuctdetails> {
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white,
+                                    color: white,
                                   ),
                                 ),
                               ],

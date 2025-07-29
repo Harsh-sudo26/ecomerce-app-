@@ -1,3 +1,4 @@
+import 'package:ecommerce/colors.dart';
 import 'package:flutter/material.dart';
 
 class Checkout extends StatefulWidget {
@@ -59,31 +60,40 @@ class _CheckoutState extends State<Checkout> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              height: 100,
+              height: 90,
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                color: Colors.redAccent,
+                color: redcolor,
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Proceed',
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+              child: Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Proceed Payment',
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: whitecolor,
+                      ),
                     ),
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: CircleAvatar(
-                      radius: 20,
-                      backgroundColor: Colors.blue,
+                    IconButton(
+                      onPressed: () {},
+                      icon: CircleAvatar(
+                        radius: 30,
+                        backgroundColor: const Color.fromARGB(
+                          255,
+                          219,
+                          221,
+                          223,
+                        ),
+                        child: Icon(Icons.arrow_forward),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
