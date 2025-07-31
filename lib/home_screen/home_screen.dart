@@ -45,13 +45,13 @@ class _HomeScreenState extends State<HomeScreen> {
             TrendyDeals(),
             TrendyDealsgrid(),
             SizedBox(height: 15),
-            Checkout(cartItems: []),
-            Profile(),
-            Settings(),
           ],
         ),
       ),
     ),
+    Checkout(cartItems: []), //can,t be in the children sizedbox
+    Profile(),
+    Settings(),
   ];
 
   @override
